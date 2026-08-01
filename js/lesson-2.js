@@ -1,4 +1,4 @@
-// Завдання 1:
+    // Завдання 1:
 
 // Створіть масив styles з елементами 'jazz' і 'blues'
 // Додайте до кінця масиву елемент 'rock-n-roll' за допомогою відповідного методу масивів
@@ -25,11 +25,11 @@
 //   }
 // }
 
-// Виклик функції
+// Виклик функції:
 
 // logItems(styles);
 
-// Завдання 2:
+    // Завдання 2:
 
 // Напишіть функцію checkLogin(array), яка:
 // Приймає масив логінів як аргумент.
@@ -50,11 +50,11 @@
 //   }
 // }
 
-// Виклик функції
+// Виклик функції:
 
 // checkLogin(logins);
 
-// Завдання 3:
+    // Завдання 3:
 
 // Напишіть функцію caclculateAverage(),
 // яка приймає довільну кількість
@@ -79,12 +79,12 @@
 //   return total / args.length;
 // }
 
-// Виклик функції
+// Виклик функції:
 
 // console.log(calculateAverage(10, 20, 30));
 // console.log(calculateAverage());
 
-// Завдання 4:
+    // Завдання 4:
 
 // Напишіть функцію, яка сумуватиме сусідні числа 
 // і пушитиме їх в новий масив.
@@ -104,12 +104,13 @@
 
 //   return newArray;
 // }
-// Виклик функції
+
+// Виклик функції:
 
 // const someArray = [22, 11, 34, 5, 12, 13, 14, 15];
 // console.log(sumNeighbors(someArray));
 
-// Завдання 5:
+    // Завдання 5:
 
 // Напишіть функцію findSmallestNumber(numbers),
 // яка шукає найменше число в масиві.
@@ -127,12 +128,12 @@
 //   return "Sory, it is not an array!";
 // }
 
-// Виклик функції
+// Виклик функції:
 
 // console.log(findSmallestNumber([10, 5, 8, 2, 15]));
 // console.log(findSmallestNumber("hello"));
 
-// Завдання 6:
+    // Завдання 6:
 
 // Напишіть функцію findLongestWord(string), яка 
 // приймає довільний рядок, що складається лише зі слів, розділених
@@ -151,9 +152,11 @@
 //   return longestWord;
 // }
 
+// Виклик функції:
+
 // console.log(findLongestWord("London is the capital of Great Britain"));
 
-// Завдання 7:
+    // Завдання 7:
 
 // Напишіть скрипт, який для об'єкту user, послідовно:
 // 1 - додасть поле mood зі значенням 'happy',
@@ -182,7 +185,7 @@
 //   console.log(`${key}:${user[key]}`);
 // }
 
-// Завдання 8:
+    // Завдання 8:
 
 // Є об'єкт, в якому зберігаються зарплати команди
 // Напишіть код для додавання усіх зарплат та
@@ -200,9 +203,11 @@
 //   0
 // );
 
+// Виклик функції:
+
 // console.log(sum);
 
-// Завдання 9:
+    // Завдання 9:
 
 // Створіть об'єкт calculator з наступними методами:
 // read(a, b) - приймає два аргумента і зберігає їх як властивості об'єкта,
@@ -240,13 +245,15 @@
 //     },
 // };
 
+// Виклик функції:
+
 // calculator.read(5, 10);
 
 // console.log(calculator.sum());
 
 // console.log(calculator.mult());
 
-// Завдання 10:
+    // Завдання 10:
 
 // Напишіть функцію calcTotalPrice(fruits, fruitName),
 // яка приймає массив об'єктів (fruits) і рядок з назвою фрукта (fruitName).
@@ -256,19 +263,21 @@
 // Зверніть увагу, що в масиві може бути кілька обʼєктів з однаковою 
 // назвою фрукта, це також треба урахувати.
 
-const fruits = [
-    { name: "Яблуко", price: 45, quantity: 7 },
-    { name: "Апельсин", price: 60, quantity: 4 },
-    { name: "Банан", price: 125, quantity: 8 },
-    { name: "Груша", price: 350, quantity: 2 },
-    { name: "Виноград", price: 440, quantity: 3 },
-    { name: "Банан", price: 125, quantity: 3 },
-  ];
+// const fruits = [
+//     { name: "Яблуко", price: 45, quantity: 7 },
+//     { name: "Апельсин", price: 60, quantity: 4 },
+//     { name: "Банан", price: 125, quantity: 8 },
+//     { name: "Груша", price: 350, quantity: 2 },
+//     { name: "Виноград", price: 440, quantity: 3 },
+//     { name: "Банан", price: 125, quantity: 3 },
+//   ];
 
-function calcTotalPrice(fruits, fruitName) {
-  return fruits
-    .filter(fruit => fruit.name === fruitName)
-    .reduce((total, fruit) => total + fruit.price * fruit.quantity, 0);
-}
+// function calcTotalPrice(fruits, fruitName) {
+//   return fruits
+//     .filter(fruit => fruit.name === fruitName)
+//     .reduce((total, fruit) => total + fruit.price * fruit.quantity, 0);
+// }
 
-console.log(calcTotalPrice(fruits, "Банан"));
+// Виклик функції:
+
+// console.log(calcTotalPrice(fruits, "Банан"));
