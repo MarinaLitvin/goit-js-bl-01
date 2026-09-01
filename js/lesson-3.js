@@ -8,6 +8,8 @@
 
 // Для створення нового масиву з масиву використовуємо map().
 
+// const squares = numbers.map(number => {return number ** 2});
+
 // const squares = numbers.map(number => number ** 2);
 
 // Виклик функції:
@@ -26,13 +28,19 @@
 //  { id: 3, values: [7, 8, 9] },
 // ];
 
-// Для створення масиву з кількох масивів використовуємо flatMap().
+// // Для створення масиву з кількох масивів використовуємо flatMap().
 
 // const result = data.flatMap(item => item.values);
 
-// Виклик функції:
+// // Виклик функції:
 
 // console.log(result);
+
+// const result = (arr) => arr.flatMap(item => item.values);
+
+// // Виклик функції:
+
+// console.log(result(data));
 
     // Завдання 3:
 
@@ -46,13 +54,19 @@
 //  { name: 'Bob', age: 19 },
 // ];
 
-// Для перевірки чи хоча б один в масиві... використовуємо some().
+// // Для перевірки чи хоча б один в масиві... використовуємо some().
 
-// const hasYoungPerson = people.some(person => person.age < 20);
+// // const hasYoungPerson = people.some(person => person.age < 20);
 
-// Виклик функції:
+// // Виклик функції:
 
-// console.log(hasYoungPerson);
+// // console.log(hasYoungPerson);
+
+// const isYoungPerson = (arr) => arr.some(person => person.age < 20);
+
+// // Виклик функції:
+
+// console.log(isYoungPerson(people));
 
     // Завдання 4:
 
@@ -106,13 +120,13 @@
 
 // const stringArray = ['banana', 'orange', 'apple', 'pear'];
 
-//Для сортування рядків в алфавітному порядку використовуємо sort(), який змінює оригінальний масив.
+// //Для сортування рядків в алфавітному порядку використовуємо toSorted(), який НЕзмінює оригінальний масив.
 
-// const sortedArray = stringArray.sort();
+// const sortedArray = stringArray.toSorted((a, b) => a.localeCompare(b));
 
-// Виклик функції:
+// // Виклик функції:
 
-// console.log(stringArray);
+// console.log(sortedArray);
 
     // Завдання 8:
 
@@ -125,13 +139,15 @@
 //  { name: 'Bob', age: 19 },
 // ];
 
-// Для сортування масиву використовуєм sort(), для порівняння використовуємо функцію порівняння до власності age.
+// // Для сортування масиву використовуєм toSorted(), для порівняння використовуємо функцію порівняння до власності age.
 
-// users.sort((a, b) => a.age - b.age);
+// const sortedUsers = users.toSorted((a, b) => a.age - b.age);
 
-// Виклик функції:
+// const sortedUsers1 = (arr) => arr.toSorted((a, b) => a.age - b.age);
+// // Виклик функції:
 
-// console.log(users);
+// console.log(sortedUsers);
+// console.log(sortedUsers1(users));
 
 // Завдання 9:
 
@@ -146,13 +162,15 @@
 //  { name: 'Bob', age: 19 },
 // ]
 
-// Для відбору об'єктів, які відповідають умові використовуємо filter().
+// // Для відбору об'єктів, які відповідають умові використовуємо filter().
 
 // const adults = user.filter(person => person.age > 20);
+// const adults1 = (arr) => arr.filter(person => person.age > 20);
 
-// Виклик функції:
+// // Виклик функції:
 
 // console.log(adults);
+// console.log(adults1(user));
 
 // Завдання 10:
 
@@ -252,9 +270,9 @@
 //   divide(value) {
 //     if (value === 0) {
 //       throw new Error("Division by zero is impossible");
+//     } else {
+//        this.result /= value;
 //     }
-
-//     this.result /= value;
 //     return this;
 //   }
 
@@ -310,6 +328,9 @@
 //   set email(newEmail) {
 //     this.#email = newEmail;
 //   }
+//   get info() {
+//    return this;
+//   }
 // }
 
 // // Перевірка:
@@ -318,12 +339,14 @@
 
 // console.log(client.login);
 // console.log(client.email);
+// console.log(client.info);
 
 // client.login = "Alisa";
 // client.email = "alisalitvin63@gmail.com";
 
 // console.log(client.login);
 // console.log(client.email);
+// console.log(client.info);
 
 // Завдання 13:
 
@@ -344,51 +367,52 @@
   //  - department - відділ, в якому працює співробітник.
 // Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з зарплатою співробітника та відділом, в якому він працює.
   
-class Person {
-    constructor(name, age, gender, email) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
-    this.email = email;
-    }
+// class Person {
+//     constructor(name, age, gender, email) {
+//     this.name = name;
+//     this.age = age;
+//     this.gender = gender;
+//     this.email = email;
+//     }
     
-    getDetails() {
-    return {
-      name: this.name,
-      age: this.age,
-      gender: this.gender,
-      email: this.email,
-    };
-  }
-}
+//     getDetails() {
+//     return {
+//       name: this.name,
+//       age: this.age,
+//       gender: this.gender,
+//       email: this.email,
+//     };
+//   }
+// }
 
-class Employee extends Person {
-  constructor(name, age, gender, email, salary, department) {
-    super(name, age, gender, email);
+// class Employee extends Person {
+//   constructor(name, age, gender, email, salary, department) {
+//     super(name, age, gender, email);
 
-    this.salary = salary;
-    this.department = department;
-  }
+//     this.salary = salary;
+//     this.department = department;
+//   }
 
-  getEmployeeDetails() {
-    return {
-      salary: this.salary,
-      department: this.department,
-    };
-  }
-}
+//   getEmployeeDetails() {
+//     return {
+//       ...super.getDetails(),
+//       salary: this.salary,
+//       department: this.department,
+//     };
+//   }
+// }
 
-// Перевірка:
+// // Перевірка:
 
-const employee = new Employee(
-  "John",
-  30,
-  "male",
-  "john@gmail.com",
-  5000,
-  "IT"
-);
+// const employee = new Employee(
+//   "John",
+//   30,
+//   "male",
+//   "john@gmail.com",
+//   5000,
+//   "IT"
+// );
 
-console.log(employee.getDetails());
+// console.log(employee.getDetails());
 
-console.log(employee.getEmployeeDetails());
+// console.log(employee.getEmployeeDetails());
